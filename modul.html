@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Modul Interaktif Poangka-Angkataka</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/modul.css">
+
+</head>
+
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<div class="fog-layer"></div>
+<div class="overlay"></div>
+
+<button class="back-btn" onclick="navigate('eksplorasi.html')">
+← Kembali
+</button>
+
+<div class="score-box">
+<span>Benar: <b id="benar">0</b></span>
+<span>Salah: <b id="salah">0</b></span>
+</div>
+
+<div class="meter-box">
+<div class="meter-label">Martabat Sosial</div>
+<div class="meter-bar">
+<div class="meter-fill" id="meter"></div>
+</div>
+</div>
+
+<div class="modul-container">
+
+<div class="modul-header">
+<h1>Simulasi Poangka-Angkataka</h1>
+<p>Pilih respon dan lihat dampaknya terhadap martabat sosial</p>
+</div>
+
+<div class="progress-box">
+Soal <span id="current">1</span> / 10
+</div>
+
+<div class="level-box" id="level">
+Level: Netral
+</div>
+
+<div class="scenario-box">
+
+<div class="character">
+
+<div class="char-img" id="char">
+
+<div class="eye left"></div>
+<div class="eye right"></div>
+<div class="mouth"></div>
+
+</div>
+
+<div class="char-reaction" id="reaction"></div>
+
+</div>
+
+<div class="scenario-text" id="scenario"></div>
+
+<div class="choices" id="choices"></div>
+
+<div class="feedback" id="feedback"></div>
+
+<div class="reflection" id="reflection">
+<p>Menurutmu kenapa menjaga martabat itu penting?</p>
+<textarea id="reflectionInput"></textarea>
+<button id="submitReflection">Kirim</button>
+</div>
+
+<button class="next-btn" id="next">Lanjut</button>
+<button class="next-btn" id="restart" style="display:none">
+Restart Simulasi
+</button>
+</div>
+
+</div>
+
+
+
+<script src="js/script.js"></script>
+<script src="js/modul.js"></script>
+
+</body>
+</html>

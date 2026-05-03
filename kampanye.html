@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kampanye Visual - Poangka-Angkataka</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/kampanye.css">
+
+</head>
+
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<canvas id="dragonCanvas"></canvas>
+<div class="fog-layer"></div>
+<div class="overlay"></div>
+
+<img src="img/naga.png" class="dragon-bg">
+<img src="img/nenas.png" class="nenas-bg">
+
+<button class="back-btn" onclick="navigate('index.html')">
+← Menu Awal
+</button>
+
+<button class="exit-btn" onclick="exitSession()">
+Keluar
+</button>
+
+<!-- progress scroll -->
+<div class="reading-progress">
+<div class="reading-bar" id="readingBar"></div>
+</div>
+
+<div class="kampanye-container">
+
+<div class="user-greeting" id="userGreeting">
+Hai Pengguna
+</div>
+
+<section class="hero">
+<h1>Poangka-Angkataka</h1>
+<p>
+Kampanye visual interaktif ini dirancang sebagai media digital untuk 
+menyampaikan nilai budaya Poangka-angkataka kepada generasi muda. 
+Melalui pendekatan visual dan interaksi, pengguna diajak memahami 
+kembali pentingnya martabat, saling menghormati, serta etika sosial 
+dalam budaya masyarakat Buton.
+</p>
+</section>
+
+<section class="content">
+
+<h2>Mengapa Kampanye Ini Penting?</h2>
+
+<p>
+Generasi muda saat ini hidup dalam ruang digital yang sangat cepat. 
+Interaksi terjadi melalui komentar, pesan singkat, dan media sosial. 
+Dalam ruang tersebut, nilai penghormatan sering kali memudar.
+</p>
+
+<p>
+Melalui kampanye ini, nilai Poangka-angkataka diangkat kembali 
+sebagai pedoman etika digital. Tujuannya bukan hanya mengenalkan 
+budaya, tetapi juga membangun perilaku sosial yang lebih sehat.
+</p>
+
+<div class="quote">
+"Budaya bukan hanya warisan masa lalu, tetapi panduan untuk masa depan."
+</div>
+
+</section>
+
+<section class="content">
+<h2>Falsafah PO-5 Masyarakat Buton</h2>
+
+<p>
+Masyarakat Buton memiliki falsafah kehidupan yang dikenal dengan 
+nilai PO-5. Nilai ini menjadi pedoman dalam menjaga hubungan sosial, 
+menghormati sesama, serta menciptakan kehidupan masyarakat yang 
+harmonis. PO-5 terdiri dari lima nilai utama yang saling berkaitan 
+dan membentuk sistem etika sosial masyarakat Buton.
+</p>
+
+<p>
+Kelima nilai tersebut yaitu Pomaa-masiaka, Popia-piara, Pomae-maeaka, 
+Poangka-angkataka, dan Pobinci-binciki kuli. Setiap nilai memiliki 
+peran dalam membentuk karakter individu serta menjaga keseimbangan 
+hubungan sosial dalam kehidupan bermasyarakat.
+</p>
+
+</section>
+
+
+
+<section class="content">
+<h2>Pomaa-masiaka</h2>
+
+<p>
+Pomaa-masiaka memiliki makna saling menyayangi antar sesama manusia. 
+Nilai ini mengajarkan bahwa setiap individu harus memiliki rasa kasih 
+sayang, kepedulian, dan empati terhadap orang lain dalam kehidupan 
+sehari-hari.
+</p>
+
+<p>
+Dalam kehidupan masyarakat, Pomaa-masiaka menjadi dasar terbentuknya 
+hubungan sosial yang penuh rasa kebersamaan. Sikap saling menyayangi 
+mendorong terciptanya lingkungan yang harmonis serta mengurangi 
+potensi konflik antar individu.
+</p>
+
+</section>
+
+
+
+<section class="content">
+<h2>Popia-piara</h2>
+
+<p>
+Popia-piara bermakna saling memelihara dan saling menjaga satu sama 
+lain. Nilai ini menekankan pentingnya tanggung jawab sosial dalam 
+menjaga hubungan antar individu dalam masyarakat.
+</p>
+
+<p>
+Melalui nilai Popia-piara, masyarakat diajarkan untuk saling membantu, 
+saling melindungi, serta menjaga keberlangsungan kehidupan sosial. 
+Nilai ini memperkuat solidaritas dan kebersamaan dalam masyarakat.
+</p>
+
+</section>
+
+
+
+<section class="content">
+<h2>Pomae-maeaka</h2>
+
+<p>
+Pomae-maeaka mengandung makna saling menjaga rasa malu. Nilai ini 
+mengajarkan pentingnya menjaga etika, sopan santun, serta perilaku 
+yang sesuai dengan norma sosial dalam masyarakat.
+</p>
+
+<p>
+Dengan adanya nilai Pomae-maeaka, setiap individu diharapkan mampu 
+menjaga sikap dan perilaku agar tidak merugikan orang lain serta 
+tetap menghormati norma yang berlaku dalam kehidupan sosial.
+</p>
+
+</section>
+
+
+
+<section class="content">
+<h2>Poangka-Angkataka</h2>
+
+<p>
+Poangka-angkataka merupakan nilai utama yang menekankan pentingnya 
+saling mengangkat martabat dan saling menghormati antar sesama. 
+Nilai ini mengajarkan bahwa setiap individu memiliki kehormatan 
+yang harus dijaga dalam interaksi sosial.
+</p>
+
+<p>
+Dalam kehidupan masyarakat Buton, Poangka-angkataka menjadi pedoman 
+dalam membangun hubungan sosial yang dilandasi rasa saling menghargai. 
+Nilai ini juga mendorong individu untuk tidak merendahkan orang lain 
+serta menjaga kehormatan sesama.
+</p>
+
+<p>
+Nilai Poangka-angkataka sangat relevan dengan kondisi generasi muda 
+saat ini, khususnya dalam lingkungan digital. Interaksi yang terjadi 
+melalui media sosial sering kali mengabaikan nilai penghormatan dan 
+martabat. Oleh karena itu, kampanye visual interaktif ini bertujuan 
+mengangkat kembali nilai tersebut dalam konteks modern.
+</p>
+
+</section>
+
+
+
+<section class="content">
+<h2>Pobinci-binciki kuli</h2>
+
+<p>
+Pobinci-binciki kuli mengandung makna empati sosial, yaitu menyakiti 
+orang lain sama seperti menyakiti diri sendiri. Nilai ini menjadi 
+landasan moral dalam menjaga hubungan antar individu.
+</p>
+
+<p>
+Nilai ini mengajarkan pentingnya memahami perasaan orang lain, 
+menghindari tindakan yang merugikan sesama, serta membangun sikap 
+toleransi dalam kehidupan bermasyarakat.
+</p>
+
+<p>
+Melalui kampanye visual interaktif, nilai empati ini diterjemahkan 
+dalam bentuk visual dan pengalaman interaktif agar lebih mudah 
+dipahami oleh generasi muda.
+</p>
+
+<button class="lanjut-btn" onclick="navigate('eksplorasi.html')">
+Mulai Eksplorasi Budaya
+</button>
+
+</section>
+
+<section class="content">
+
+<h2>Simulasi Situasi Sosial</h2>
+
+<p>
+Bayangkan kamu melihat seseorang dihina di media sosial karena 
+pendapatnya berbeda. Apa yang akan kamu lakukan?
+</p>
+
+<div class="decision-box">
+
+<div class="decision-options">
+
+<button onclick="decision(1)">
+Membela dan menghentikan komentar negatif
+</button>
+
+<button onclick="decision(2)">
+Diam saja agar tidak terlibat
+</button>
+
+<button onclick="decision(3)">
+Ikut berkomentar
+</button>
+
+</div>
+
+<div class="decision-result" id="decisionResult"></div>
+
+</div>
+
+</section>
+
+<section class="content">
+<h2>Istilah Budaya Penting</h2>
+
+<p>
+Nilai 
+<span class="tooltip">
+Pomaa-masiaka
+<span class="tooltip-text">
+Saling menyayangi dan menunjukkan empati kepada sesama
+</span>
+</span>
+menjadi dasar hubungan sosial masyarakat Buton.
+</p>
+
+<p>
+Konsep 
+<span class="tooltip">
+Popia-piara
+<span class="tooltip-text">
+Saling menjaga dan saling membantu dalam kehidupan sosial
+</span>
+</span>
+mendorong solidaritas dan kebersamaan.
+</p>
+
+<p>
+Nilai 
+<span class="tooltip">
+Pomae-maeaka
+<span class="tooltip-text">
+Menjaga rasa malu dan etika sosial
+</span>
+</span>
+membentuk perilaku sopan dalam masyarakat.
+</p>
+
+<p>
+Prinsip 
+<span class="tooltip">
+Poangka-angkataka
+<span class="tooltip-text">
+Saling mengangkat martabat dan menghormati sesama
+</span>
+</span>
+menjadi inti kampanye visual ini.
+</p>
+
+<p>
+Nilai 
+<span class="tooltip">
+Pobinci-binciki kuli
+<span class="tooltip-text">
+Menyakiti orang lain sama dengan menyakiti diri sendiri
+</span>
+</span>
+menekankan empati dalam interaksi sosial.
+</p>
+
+</section>
+
+<!-- MINI QUIZ -->
+<section class="content quiz-section">
+
+<h2>Uji Pemahaman Cepat</h2>
+
+<p>Pilih nilai yang paling sesuai dengan situasi berikut:</p>
+
+<div class="quiz-box">
+
+<div class="quiz-question">
+Temanmu dipermalukan di depan umum. Nilai apa yang harus kamu terapkan?
+</div>
+
+<div class="quiz-choices">
+
+<button class="quiz-btn" data-answer="false">
+Pomae-maeaka
+</button>
+
+<button class="quiz-btn" data-answer="true">
+Poangka-angkataka
+</button>
+
+<button class="quiz-btn" data-answer="false">
+Popia-piara
+</button>
+
+</div>
+
+<div class="quiz-feedback" id="quizFeedback"></div>
+
+</div>
+
+</section>
+
+<!-- QUOTE GENERATOR -->
+<section class="content quote-section">
+
+<h2>Refleksi Nilai Budaya</h2>
+
+<div class="quote-box" id="quoteBox">
+Klik tombol untuk melihat refleksi nilai Poangka-Angkataka
+</div>
+
+<button class="quote-btn" onclick="generateQuote()">
+Tampilkan Refleksi
+</button>
+
+</section>
+
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/kampanye.js"></script>
+
+</body>
+</html>

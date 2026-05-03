@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kampanye Visual Poangka-Angkataka</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<div class="fog-layer"></div>
+<div class="overlay"></div>
+
+<div class="container">
+
+<h1 class="title fade-item">
+Kampanye Visual Interaktif
+<span>Poangka-Angkataka</span>
+</h1>
+
+<div class="menu">
+
+<div class="menu-item">
+<button class="menu-btn fade-item" onclick="startNavigate('kampanye.html')">
+Mulai Kampanye Visual
+</button>
+<div class="menu-desc">
+Memahami nilai martabat dan etika sosial
+</div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn fade-item" onclick="startNavigate('eksplorasi.html')">
+Eksplorasi Budaya Buton
+</button>
+<div class="menu-desc">
+Belajar nilai budaya melalui interaksi
+</div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn fade-item" onclick="startNavigate('modul.html')">
+Interaksi Modul Poangka-Angkataka
+</button>
+<div class="menu-desc">
+Uji pemahamanmu melalui simulasi
+</div>
+</div>
+
+<div class="menu-item">
+<button class="menu-btn fade-item" onclick="navigate('tentang.html')">
+Tentang Proyek
+</button>
+<div class="menu-desc">
+Latar belakang dan tujuan kampanye
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- POPUP INPUT USER -->
+
+<div class="popup" id="popup">
+
+<div class="popup-box">
+<button class="close-btn" onclick="goBack()">✕</button>
+<h2>Masukkan Data</h2>
+
+<input type="text" id="nama" placeholder="Nama kamu">
+
+<input type="number" id="umur" placeholder="Umur kamu">
+
+<button onclick="submitUser()">Mulai</button>
+
+</div>
+
+</div>
+
+<!-- CINEMATIC INTRO -->
+<div class="intro-screen" id="introScreen">
+
+<div class="intro-text" id="line1">
+Di tanah Buton...
+</div>
+
+<div class="intro-text" id="line2">
+Nilai bukan sekadar warisan...
+</div>
+
+<div class="intro-text" id="line3">
+Tetapi bagian dari kehidupan sehari hari...
+</div>
+
+<div class="gate-left"></div>
+<div class="gate-right"></div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

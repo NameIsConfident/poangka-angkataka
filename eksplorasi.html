@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eksplorasi PO-5</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/eksplorasi.css">
+
+</head>
+
+<body>
+
+<canvas id="bgCanvas"></canvas>
+<div class="fog-layer"></div>
+<div class="overlay"></div>
+
+<button class="back-btn" onclick="navigate('kampanye.html')">
+← Kembali
+</button>
+
+<button class="exit-btn" onclick="exitSession()">
+Keluar
+</button>
+
+<div class="reading-progress">
+<div class="reading-fill" id="readingFill"></div>
+</div>
+
+<div class="user-greeting" id="userGreeting">
+Hai Pengguna
+</div>
+
+<div class="eksplorasi-container">
+
+<div class="title">
+Eksplorasi Nilai PO-5
+<span>Klik setiap nilai untuk melihat penjelasan</span>
+</div>
+
+
+<!-- Progress -->
+<div class="explore-progress">
+
+<div class="progress-title">
+Progress Eksplorasi
+</div>
+
+<div class="progress-grid">
+<div class="progress-item" data-nilai="pomaa">Pomaa</div>
+<div class="progress-item" data-nilai="popia">Popia</div>
+<div class="progress-item" data-nilai="pomae">Pomae</div>
+<div class="progress-item" data-nilai="poangka">Poangka</div>
+<div class="progress-item" data-nilai="pobinci">Pobinci</div>
+</div>
+
+</div>
+
+
+<!-- Fact -->
+<div class="fact-box" id="factBox"></div>
+
+
+<!-- Scenario -->
+<div class="scenario-box">
+
+<h3>Simulasi Sosial</h3>
+
+<p>
+Temanmu dipermalukan di depan umum. Apa yang kamu lakukan?
+</p>
+
+<div class="scenario-options">
+
+<button onclick="chooseScenario('poangka')">
+Membela dan menghentikan ejekan
+</button>
+
+<button onclick="chooseScenario('pomae')">
+Menegur dengan sopan
+</button>
+
+<button onclick="chooseScenario('none')">
+Diam saja
+</button>
+
+</div>
+
+<div class="scenario-result" id="scenarioResult"></div>
+
+</div>
+
+
+<!-- Quiz -->
+<div class="mini-quiz">
+
+<h3>Quiz Cepat</h3>
+
+<p id="quizQuestion">
+Memahami perasaan orang lain termasuk nilai...
+</p>
+
+<div class="quiz-options">
+
+<button onclick="answerQuiz(this,true)">
+Pobinci-binciki kuli
+</button>
+
+<button onclick="answerQuiz(this,false)">
+Popia-piara
+</button>
+
+<button onclick="answerQuiz(this,false)">
+Pomae-maeaka
+</button>
+
+</div>
+
+<div class="quiz-result" id="quizResult"></div>
+
+</div>
+
+
+<!-- Cards -->
+<div class="card-grid">
+
+
+<!-- Pomaa -->
+<div class="card">
+<div class="card-title">Pomaa-masiaka</div>
+
+<div class="card-content">
+
+<p>
+Nilai yang mengajarkan 
+<span class="tooltip">saling menyayangi
+<span class="tooltip-text">
+Kasih sayang dalam hubungan sosial
+</span>
+</span>
+antar sesama manusia.
+</p>
+
+<div class="example">
+Contoh nyata:
+• Membantu teman yang kesulitan  
+• Tidak mengejek kekurangan orang lain  
+• Memberi dukungan saat teman gagal
+</div>
+
+<div class="reflection">
+Di dunia digital, Pomaa-masiaka terlihat dari bagaimana kita
+memberikan komentar yang membangun, bukan menjatuhkan.
+</div>
+
+<div class="impact">
+Jika nilai ini hilang:
+Hubungan sosial menjadi dingin, individualis,
+dan kurang empati.
+</div>
+
+</div>
+</div>
+
+
+<!-- Popia -->
+<div class="card">
+<div class="card-title">Popia-piara</div>
+
+<div class="card-content">
+
+<p>
+Nilai 
+<span class="tooltip">saling menjaga
+<span class="tooltip-text">
+Melindungi hubungan sosial
+</span>
+</span>
+dalam kehidupan masyarakat.
+</p>
+
+<div class="example">
+Contoh nyata:
+• Mengingatkan teman dengan baik  
+• Menjaga rahasia teman  
+• Membela teman dari perlakuan tidak adil
+</div>
+
+<div class="reflection">
+Dalam ruang digital, Popia-piara berarti
+menjaga privasi orang lain dan tidak menyebarkan data pribadi.
+</div>
+
+<div class="impact">
+Jika diabaikan:
+Kepercayaan antar individu akan mudah rusak.
+</div>
+
+</div>
+</div>
+
+
+<!-- Pomae -->
+<div class="card">
+<div class="card-title">Pomae-maeaka</div>
+
+<div class="card-content">
+
+<p>
+Mengajarkan menjaga 
+<span class="tooltip">rasa malu
+<span class="tooltip-text">
+Etika dan sopan santun sosial
+</span>
+</span>
+dalam kehidupan sosial.
+</p>
+
+<div class="example">
+Contoh nyata:
+• Tidak mempermalukan orang lain  
+• Menjaga ucapan di media sosial  
+• Menghormati perbedaan pendapat
+</div>
+
+<div class="reflection">
+Nilai ini membantu generasi muda memahami bahwa
+kebebasan berbicara tetap membutuhkan etika.
+</div>
+
+<div class="impact">
+Tanpa nilai ini:
+Komentar kasar dan cyberbullying mudah terjadi.
+</div>
+
+</div>
+</div>
+
+
+<!-- Highlight -->
+<div class="card highlight">
+<div class="card-title">Poangka-Angkataka</div>
+
+<div class="card-content">
+
+<p>
+Nilai utama yang menekankan 
+<span class="tooltip">martabat
+<span class="tooltip-text">
+Kehormatan sosial individu
+</span>
+</span>
+dan penghormatan sesama.
+</p>
+
+<div class="example">
+Contoh nyata:
+• Tidak merendahkan teman  
+• Memberi apresiasi usaha orang lain  
+• Menjaga harga diri sesama
+</div>
+
+<div class="reflection">
+Dalam media sosial, nilai ini terlihat dari
+cara kita berdebat tanpa menghina.
+</div>
+
+<div class="impact">
+Tanpa Poangka-Angkataka:
+Lingkungan sosial menjadi penuh penghinaan dan konflik.
+</div>
+
+<button class="mulai-btn" id="mulaiBtn">
+Masuk Modul Interaktif
+</button>
+
+</div>
+</div>
+
+
+<!-- Pobinci -->
+<div class="card">
+<div class="card-title">Pobinci-binciki kuli</div>
+
+<div class="card-content">
+
+<p>
+Empati sosial dimana menyakiti orang lain
+sama seperti menyakiti diri sendiri.
+</p>
+
+<div class="example">
+Contoh nyata:
+• Tidak menyebar aib orang lain  
+• Menghindari bullying  
+• Memahami perasaan sesama
+</div>
+
+<div class="reflection">
+Di internet, nilai ini berarti berpikir dulu
+sebelum mengirim komentar.
+</div>
+
+<div class="impact">
+Jika nilai ini hilang:
+Kebencian dan permusuhan akan mudah berkembang.
+</div>
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/eksplorasi.js"></script>
+
+</body>
+</html>
